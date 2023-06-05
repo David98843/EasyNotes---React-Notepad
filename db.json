@@ -1,0 +1,36 @@
+{
+  "notes": [
+    {
+      "title": "How to make a million in 3 days",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nemo alias quae quod nisi fugiat quisquam debitis repellat molestias magni, necessitatibus dolore, enim quia, nulla quasi! Maiores atque molestias commodi.",
+      "day": "March 22",
+      "time": "18:39",
+      "favorite": false,
+      "id": 1
+    },
+    {
+      "title": "Blab ab,dcasd",
+      "content": "Lnse mbsd sd,bnv MDG ASD",
+      "day": "March 22",
+      "time": "18:58",
+      "favorite": false,
+      "id": 2
+    },
+    {
+      "title": "Town Hall Speech",
+      "content": "A tone hall du",
+      "day": "March 22",
+      "time": "20:21",
+      "favorite": false,
+      "id": 3
+    }
+  ],
+  "reminders": [
+    {
+      "title": "Go to John's Jouse",
+      "description": "Holiday Lireb  ds",
+      "date": "date object",
+      "date created": "date object"
+    }
+  ]
+}

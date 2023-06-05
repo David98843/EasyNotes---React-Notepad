@@ -1,0 +1,349 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 3;
+  background: whitesmoke;
+}
+
+.header-logo h2 span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(20, 40, 63);
+}
+
+.header-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-icons i {
+  margin: auto 15px;
+  font-size: 28px;
+  transition: 0.3s ease-in-out;
+}
+
+.header-icons i:hover {
+  color: chocolate;
+}
+
+.content-text {
+  width: 90%;
+}
+
+.content-text p, .title-text h3, .day-text h5, .time-text h5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.favorite {
+  color: hotpink !important;
+}
+
+.go-back {
+  position: absolute;
+  top: 0%;
+  right: 10px;
+  font-weight: bolder;
+  font-size: 20px;
+  padding: 10px;
+  background: rgb(130, 169, 240);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  transition: 0.15s ease-in-out;
+}
+
+.go-back-2 {
+  position: absolute;
+  top: 20%;
+}
+
+.go-back:hover {
+  cursor: pointer;
+}
+
+input[type=text], textarea {
+  border: none;
+}
+
+input[type=text]:focus, textarea:focus {
+  border: none;
+  outline: none;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+input[type=text], textarea {
+  background: rgb(20, 40, 63);
+  border-radius: 5px;
+  color: whitesmoke;
+}
+
+input[type=text] {
+  padding: 15px;
+  width: 80%;
+  font-weight: bolder;
+  letter-spacing: 1.1px;
+  font-size: 18px;
+}
+
+textarea {
+  padding: 10px;
+  color: white;
+}
+
+.xyz {
+  position: relative;
+}
+
+.displayer {
+  position: absolute;
+  top: -10px;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+
+.edit-btns {
+  width: -moz-max-content;
+  width: max-content;
+  background: black;
+  color: whitesmoke;
+}
+
+.edit-btns .col {
+  background: rgba(20, 40, 63, 0.774);
+  border-radius: 4px;
+}
+
+.itals-text {
+  font-style: italic;
+}
+
+.bold-text {
+  font-weight: bolder;
+}
+
+.allnote {
+  display: flex;
+  flex-flow: column-reverse !important;
+}
+
+.note {
+  position: relative;
+}
+
+.note-options-cont {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.note-options-cont .items {
+  background: rgb(130, 169, 240);
+  display: flex;
+  align-items: center;
+  padding: 5px 0px;
+  border-radius: 3px;
+}
+
+.note-options-cont i {
+  margin: auto 5px;
+  padding: 3px;
+  color: whitesmoke;
+}
+
+.note-options-cont i:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.note:hover .note-options-cont {
+  opacity: 1;
+}
+
+.note-content {
+  height: 50vh;
+  background: rgb(20, 40, 63);
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+}
+
+.date-text, .time-text {
+  align-items: center !important;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 10px auto;
+  background: rgb(130, 169, 240);
+}
+
+.search-bar > input {
+  border: 1px solid rgb(130, 169, 240);
+  padding: 10px;
+  outline: none;
+  width: 90%;
+}
+
+.search-bar > .search-icon {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.clock {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: grey;
+  border: 2px solid black;
+  margin: 10px auto;
+  position: relative;
+}
+
+.stick {
+  position: absolute;
+  /* width : 100px; */
+  height: 100px;
+  left: 50%;
+  transform-origin: 0% 100%;
+  transition: 0.2s ease-in-out;
+}
+
+.hour-stick {
+  border: 2px solid red;
+  top: 0;
+}
+
+.minute-stick {
+  height: 80px;
+  transform-origin: 20% 120%;
+  border: 1px solid green;
+  transform: rotate(120deg);
+}
+
+.seconds-display {
+  position: absolute;
+  top: 40%;
+  right: 40%;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(130, 169, 240, 0.733);
+  text-align: center;
+}
+
+.hour-reminder-selector, .minute-reminder-selector {
+  width: 100%;
+  margin: 7px auto;
+}
+
+.set-reminder {
+  width: 60%;
+  padding: 15px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: space-around;
+  /* margin : 10px auto */
+  border-right: 2px solid gray;
+}
+
+.set-reminder-cont {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.set-hour, .set-minute, .set-day {
+  margin: 12px;
+}
+
+.reminder-display {
+  padding: 10px;
+}
+
+.reminder {
+  background: rgb(20, 40, 63);
+  color: white;
+}
+
+@media screen and (min-width: 900px) {
+  .allnote {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .note {
+    width: 60%;
+    justify-content: space-between;
+  }
+  .add-note, .show-note {
+    width: 60%;
+    margin: 10px auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .header-logo h2 {
+    font-size: 20px;
+    margin: auto 15px;
+  }
+  .note {
+    width: 90% !important;
+    margin: 7px auto !important;
+  }
+  .search-bar {
+    width: 85%;
+  }
+  .add-note {
+    padding: 1.5em !important;
+    margin-top: 2em !important;
+    position: relative;
+  }
+  .go-back-2 {
+    top: -7%;
+  }
+}/*# sourceMappingURL=App.css.map */
